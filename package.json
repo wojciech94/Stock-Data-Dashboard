@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/wojciech94/Stock-Data-Dashboard#readme",
   "dependencies": {
-    "alphavantage": "^2.3.0",
+    "ccxt-js": "^1.15.38",
     "sass": "^1.54.8"
   }
 }
