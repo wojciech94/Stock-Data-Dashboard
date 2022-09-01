@@ -1,0 +1,26 @@
+{
+  "name": "stock-data-dashboard",
+  "version": "1.0.0",
+  "description": "Stock data dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojciech94/Stock-Data-Dashboard.git"
+  },
+  "keywords": [
+    "stock"
+  ],
+  "author": "szean",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/wojciech94/Stock-Data-Dashboard/issues"
+  },
+  "homepage": "https://github.com/wojciech94/Stock-Data-Dashboard#readme",
+  "dependencies": {
+    "alphavantage": "^2.3.0",
+    "sass": "^1.54.8"
+  }
+}

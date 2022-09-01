@@ -1,3 +1,4 @@
 # scss files
 ./src/scss
-./api.txt
+api.txt
+node_modules
