@@ -10,8 +10,8 @@
 }
 
 .remove-btn {
-	background-image: url('../img/minus-circle.svg');
-	border: 4px solid #ee8888;
+	background-image: url('../img/x-circle.svg');
+	border: 2px solid #ee8888;
 }
 
 body {
@@ -19,10 +19,10 @@ body {
 	background-attachment: fixed;
 
 	.wrapper {
-		margin: 0 auto;
+		margin: 20px auto;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0 25px;
+		gap: 20px;
 		width: 100%;
 		height: 100%;
 		max-width: 1200px;
@@ -30,7 +30,7 @@ body {
 		.data-item {
 			width: 200px;
 			height: 200px;
-			margin: 20px auto;
+			margin: 0 20px;
 			border: 2px solid;
 			border-radius: 16px;
 			border-color: #8355dd;
@@ -51,11 +51,26 @@ body {
 			}
 
 			&__display {
+				position: relative;
+				height: 100%;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-evenly;
+				justify-content: center;
 				align-items: center;
-				height: 100%;
+				gap: 30px;
+
+				&__btn {
+					position: absolute;
+					right: 12px;
+					top: 12px;
+					width: 36px;
+					height: 36px;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-color: #fff0;
+					border-radius: 4px;
+					cursor: pointer;
+				}
 
 				&__symbol {
 					color: #eee;

@@ -9,17 +9,26 @@ const apiKey = '&apikey=XGPBHNB9IWTJ80FR'
 
 const endPoint = baseQuery + globalQuoteFun + symbolQuote + apiKey
 
-let data1
+let symbols
+let prices
 
 const loadData = (symbol, id) => {
-	const query = baseQuery + globalQuoteFun + symbolQuote + symbol + apiKey
-	fetch(query)
-		.then(response => response.json())
-		.then(data => {
-			data1 = data
-			symbolsQuery[id].textContent = data1['Global Quote']['01. symbol']
-			pricesQuery[id].textContent = data1['Global Quote']['05. price']
-		})
+	if (localStorage.getItem('Price' + id) != null) {
+		symbolsQuery[id].textContent = localStorage.getItem('Symbol' + id)
+		pricesQuery[id].textContent = localStorage.getItem('Price' + id)
+		console.log('Loaded from local Storage')
+	} else {
+		const query = baseQuery + globalQuoteFun + symbolQuote + symbol + apiKey
+		fetch(query)
+			.then(response => response.json())
+			.then(data => {
+				let data1 = data
+				symbolsQuery[id].textContent = data1['Global Quote']['01. symbol']
+				pricesQuery[id].textContent = data1['Global Quote']['05. price']
+				localStorage.setItem('Symbol' + id, data1['Global Quote']['01. symbol'])
+				localStorage.setItem('Price' + id, data1['Global Quote']['05. price'])
+			})
+	}
 }
 
 loadData('IBM', 0)
