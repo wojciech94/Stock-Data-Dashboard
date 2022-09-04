@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 62.5%;
+}
+
+.add-btn {
+  background-image: url("../img/plus-circle.svg");
+  border: none;
+}
+
+.remove-btn {
+  background-image: url("../img/x-circle.svg");
+  border: 2px solid #db2a2a;
+}
+
+body {
+  background-color: #1b2432;
+}
+body .wrapper {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+}
+body .wrapper .data-item {
+  width: 200px;
+  height: 200px;
+  margin: 0 20px;
+  border: 2px solid;
+  border-radius: 16px;
+  border-color: #444c5a;
+  background-color: #242d3c;
+  overflow: hidden;
+}
+body .wrapper .data-item__action {
+  position: relative;
+}
+body .wrapper .data-item__action__ticker {
+  position: absolute;
+  padding: 2px 5px;
+  left: 50%;
+  top: 20px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  transform: translate(-50%);
+}
+body .wrapper .data-item__action__btn {
+  position: absolute;
+  transform: translate(50%, 50%);
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 8px;
+  cursor: pointer;
+}
+body .wrapper .data-item__display {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #242d3c;
+}
+body .wrapper .data-item__display__btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .wrapper .data-item__display__symbol {
+  color: #eee;
+  font-size: 2.2rem;
+}
+body .wrapper .data-item__display__price {
+  color: #eee;
+  font-size: 1.8rem;
+}
+body .wrapper .data-item__display__change {
+  font-size: 1.6rem;
+}
+body .wrapper .data-item__display__change--down {
+  color: red;
+}
+body .wrapper .data-item__display__change--up {
+  color: lime;
+}
+
+/*# sourceMappingURL=style.css.map */
