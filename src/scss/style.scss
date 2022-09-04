@@ -6,6 +6,7 @@
 
 html {
 	font-family: 'Merriweather Sans', sans-serif;
+	font-size: 62.5%;
 }
 
 .add-btn {
@@ -24,6 +25,7 @@ body {
 	.wrapper {
 		margin: 20px auto;
 		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 20px;
@@ -43,6 +45,15 @@ body {
 
 			&__action {
 				position: relative;
+				&__ticker {
+					position: absolute;
+					padding: 2px 5px;
+					left: 50%;
+					top: 20px;
+					font-size: 1.4rem;
+					line-height: 2.4rem;
+					transform: translate(-50%);
+				}
 				&__btn {
 					position: absolute;
 					transform: translate(50%, 50%);
