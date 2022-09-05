@@ -46,15 +46,20 @@ const loadData = id => {
 //Get data by symbol ticker from alphavantage
 const addData = () => {
 	let symbol = addInput.value
+	if (symbol === '') {
+		return
+	}
 	const query = baseQuery + globalQuoteFun + symbolQuote + symbol + apiKey
 	fetch(query)
 		.then(response => response.json())
 		.then(data => {
 			data1 = data
 			addInput.value = '' //reset input value
-			addItem()
+			if (data1['Global Quote']['01. symbol'] != undefined) {
+				addItem()
+			}
 		})
-		.catch(error => console.error(error))
+		.catch(error => console.error(error + 'Error Catched'))
 }
 
 //Add new panel if ticker is valid
