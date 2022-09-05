@@ -5,8 +5,11 @@ let symbolsText = document.querySelectorAll('.data-item__display__symbol')
 let pricesText = document.querySelectorAll('.data-item__display__price')
 let changesText = document.querySelectorAll('.data-item__display__change')
 let addInput = document.querySelector('.data-item__action__ticker')
-let addBtn = document.querySelector('.data-item__action__btn')
 let removeBtns = document.querySelectorAll('.remove-btn')
+const addBtn = document.querySelector('.data-item__action__btn')
+const helper = document.querySelector('.helper')
+const helperClose = document.querySelector('.helper__area__button')
+const helperShow = document.querySelector('.info-btn')
 
 const baseQuery = 'https://www.alphavantage.co/query?function='
 const globalQuoteFun = 'GLOBAL_QUOTE'
@@ -16,9 +19,6 @@ const apiKey = '&apikey=XGPBHNB9IWTJ80FR'
 const endPoint = baseQuery + globalQuoteFun + symbolQuote + apiKey
 
 let data1
-let test1
-let test2
-let test3
 
 //Load display panels
 const loadDisplays = () => {
@@ -160,10 +160,16 @@ function setChangeColor(num, id) {
 	}
 }
 
+const toggleHelper = () => {
+	helper.classList.toggle('hidden')
+}
+
 loadDisplays()
 
 //Listeners
 addBtn.addEventListener('click', addData)
+helperClose.addEventListener('click', toggleHelper)
+helperShow.addEventListener('click', toggleHelper)
 removeBtns.forEach(btn => {
 	btn.addEventListener('click', removeItem)
 })
