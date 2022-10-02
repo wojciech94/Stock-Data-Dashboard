@@ -117,8 +117,6 @@ const removeItem = e => {
 	if (displayId != null) {
 		wrapper.removeChild(e.target.parentNode.parentNode)
 		updateDisplays(displayId)
-		//clear localStorage symbol/price/change
-		//update localStoragedisplays count
 	}
 }
 
